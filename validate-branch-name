@@ -1,0 +1,18 @@
+#!/bin/bash
+
+branch="$(git symbolic-ref --short HEAD)"
+pattern='^develop$|^(feature|bugfix|release|hotfix|support)/.+$'
+
+if [[ ! $branch =~ $pattern ]]; then
+		echo "Branch name '$branch' does not match pattern. It should be like"
+		echo "    develop"
+		echo "    feature/*"
+		echo "    bugfix/*"
+		echo "    release/*"
+		echo "    hotfix/*"
+		echo "    support/*"
+
+		exit 1
+fi
+
+exit 0

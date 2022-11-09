@@ -10,7 +10,7 @@
   "extends": [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
-		"prettier",
+		"prettier"
   ],
   "root": true,
 	"rules": {
